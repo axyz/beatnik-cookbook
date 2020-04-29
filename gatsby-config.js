@@ -41,6 +41,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        type: `hashtag`,
+        hashtag: `crab`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

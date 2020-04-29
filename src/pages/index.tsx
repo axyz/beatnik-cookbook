@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  const instagramPosts = data.allInstaNode.nodes;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -33,6 +34,13 @@ const BlogIndex = ({ data, location }) => {
           </article>
         )
       })}
+
+      < hr />
+      <div>
+      {instagramPosts.map((post) =>
+          <img src={post.thumbnails[1].src} />
+      )}
+      </div>
     </Layout>
   )
 }
@@ -58,6 +66,13 @@ export const pageQuery = graphql`
             title
             description
           }
+        }
+      }
+    }
+      allInstaNode(filter: {thumbnails: {elemMatch: {}}}, limit: 12, sort: {fields: timestamp, order: DESC}) {
+      nodes {
+        thumbnails {
+          src
         }
       }
     }
