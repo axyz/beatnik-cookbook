@@ -17,9 +17,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article>
         <header>
-          <h1>
+          <h2>
             {post.frontmatter.title}
-          </h1>
+          </h2>
           <p>
             {post.frontmatter.date}
           </p>

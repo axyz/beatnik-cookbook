@@ -15,13 +15,13 @@ const BlogIndex = ({ data, location }) => {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <article className="mb-6" key={node.fields.slug}>
             <header>
-              <h3>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
+                  <h2>
+                    {title}
+                  </h2>
                 </Link>
-              </h3>
               <small>{node.frontmatter.date}</small>
             </header>
             <section>
@@ -37,8 +37,8 @@ const BlogIndex = ({ data, location }) => {
 
       < hr />
       <div>
-      {instagramPosts.map((post) =>
-          <img src={post.thumbnails[1].src} />
+      {instagramPosts.map((post, i) =>
+          <img key={i} src={post.thumbnails[1].src} />
       )}
       </div>
     </Layout>

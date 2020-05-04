@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `The Beatnik Cookbook`,
-    description: `Great food on a budget`,
+    description: `How to live pretentiously on a budget`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -48,6 +48,7 @@ module.exports = {
         hashtag: `crab`,
       },
     },
+    `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
