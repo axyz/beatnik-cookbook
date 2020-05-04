@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
         <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Serif&display=swap" rel="stylesheet"/>
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {/* <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> */}
     </Helmet>
   );
 }
